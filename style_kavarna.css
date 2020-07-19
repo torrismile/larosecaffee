@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+:root {
+  --success-color: #2ecc71;
+  --error-color: #e74c3c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+    color: #282425;
+    background-color: #fff1e6;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    display: block;
+}
+
+/* .clear
+    {
+    clear:both;
+}
+
+.right
+    {
+    float: right;
+}
+
+.left
+    {
+    float: left;
+} */
+
+h1 {
+  font-weight: 100px;
+  text-align: center;
+  margin: 0;
+  text-shadow: 0 3px 10px rgba( 0, 0, 0, 0, 7);
+}
+
+h2 {
+  font-weight: 48px;
+  text-align: center;
+  margin-top: 0;
+}
+
+h3 {
+  font-weight: 24px;
+  margin-top: 16px;
+  text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+  .lesnikavarna p {
+    font-size: 14px;
+    line-height: 18px;
+    padding: 0;
+    margin: 5px 0 0 0;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1367px) {
+  .lesnikavarna p {
+    font-size: 24px;
+    line-height: 1.5;
+    padding: 0;
+    margin: 5px 0 0 0;
+  }
+}
+
+@media screen and (min-width: 1368px) {
+  .lesnikavarna p {
+    padding-left: 20%;
+    padding-right: 20%;
+    font-size: 24px;
+    line-height: 1.5;
+    /* padding: 0; */
+    margin: 5px 0 0 0;
+  }
+}
+
+.fotogalerie{
+  background-color: #f7c2ab;
+}
+
+.fotogalerie img {
+  width: 32%;
+}
+
+.fotogalerie--img--kulaty {
+  border-radius: 10px;
+}
+
+.fotogalerie--img--vicekulaty {
+  border-radius: 50%;
+}
+
+.otoc {
+  transform: rotate(450deg);
+}
+
+.namlynku p {
+  text-align: center;
+}
+
+.omenu {
+  background-color: #f7c2ab;
+}
+
+.lesnikavarna,
+.fotogalerie,
+.namlynku,
+.omenu,
+.reservation {
+  padding: 50px 15%;
+  overflow: hidden;
+}
+
+table {
+  border-spacing: 0;
+  margin: 0 auto;
+}
+
+th,
+td {
+  text-align: left;
+  border-bottom: 1px solid black;
+  padding: 10px 0;
+}
+
+.cena {
+  text-align: right;
+  padding-left: 50px;
+}
+
+.showcase {
+  padding: 300px 30px;
+  background-image: url(obrazky/header1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.showcase {
+  background-color: #282425;
+  color: white;
+  text-align: center;
+}
+
+.paticka {
+  margin: 0;
+  padding: 20px 0;
+  text-align: center;
+  background-color: #282425;
+  display: block;
+  color: white;
+}
+
+@media only screen and (max-width: 800px) {
+.reservation {
+  border-radius: 5px;
+  padding: 10px;
+  width: 350px;
+  margin: 20px auto;
+  background-color: #f7c2ab;
+  border-radius: 5px;
+  }
+}
+
+@media only screen and (min-width: 801px) {
+.reservation {
+  border-radius: 5px;
+  padding: 10px;
+  width: 400px;
+  margin: 20px auto;
+  background-color: #f7c2ab;
+  border-radius: 5px;
+  }
+}
+
+.reservation h2 {
+  color: #777;
+}
+
+form {
+  padding: 30px 40px;
+}
+
+.form-control {
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  position: relative;
+}
+
+.form-control label {
+  color: #777;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-control input {
+  border: 2px solid #ccc;
+  display: block;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.form-control input:focus {
+  outline: 0;
+  border-color: #777;
+}
+
+.form-control.success input {
+  border-color: var(--success-color);
+}
+
+.form-control.error input {
+  border-color: var(--error-color);
+}
+
+.form-control small {
+  color: var(--error-color);
+  position: relative;
+  /* bottom: 0; */
+  /* left: 0; */
+  display: none;
+  line-height: normal;
+}
+
+.form-control.error small {
+  display: block;
+  padding: 10px 0;
+}
+
+.button {
+  width: 190px;
+  height: 60px;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: 4px solid;
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  color: #777;
+  position: relative;
+  outline: 0;
+  margin: 0 auto;
+  display: block;
+}
+
+  .button::before {
+      content:"";
+      width: 20px;
+      height: 4px;
+      position: absolute;
+      left: 0;
+      top: -4px;
+      display: block;
+      background-color: #f7c2ab;
+      transition: 500ms ease-in-out;
+}
+
+  .button::after {
+    content:"";
+    width: 20px;
+    height: 4px;
+    position: absolute;
+    right: 0;
+    bottom: -4px;
+    display: block;
+    background-color: #f7c2ab;
+    transition: 500ms ease-in-out;
+}
+
+.button:hover::before {
+    left: calc(100% - 20px);
+}
+
+.button:hover::after {
+    right: calc(100% - 20px);
+}
+
+.button:active {
+  color: #756158;
+}
+
+.thanku {
+  visibility: hidden;
+}
