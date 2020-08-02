@@ -23,7 +23,7 @@ body {
   position: absolute;
   width: 0;
   height: 0;
-  left: -9999px;
+  right: -9999px;
 }
 
 @media only screen and (min-width: 801px) {

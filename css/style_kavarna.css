@@ -5,7 +5,9 @@
   --error-color: #e74c3c;
 }
 
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -19,7 +21,7 @@ body {
     font-size: 20px;
     line-height: 1.5;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     justify-content: center;
     align-items: center;
     overflow: auto;
@@ -42,22 +44,40 @@ body {
 } */
 
 h1 {
-  font-weight: 100px;
+  font-size: 100px;
   text-align: center;
   margin: 0;
   text-shadow: 0 3px 10px rgba( 0, 0, 0, 0, 7);
 }
 
-h2 {
-  font-weight: 48px;
-  text-align: center;
-  margin-top: 0;
-}
-
 h3 {
-  font-weight: 24px;
+  font-size: 24px;
   margin-top: 16px;
   text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+  h2 {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1367px) {
+  h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 1368px) {
+  h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 0;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -71,7 +91,7 @@ h3 {
 
 @media screen and (min-width: 481px) and (max-width: 1367px) {
   .lesnikavarna p {
-    font-size: 24px;
+    font-size: 20px;
     line-height: 1.5;
     padding: 0;
     margin: 5px 0 0 0;
@@ -89,20 +109,41 @@ h3 {
   }
 }
 
-.fotogalerie{
+.fotogalerie {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-column-gap: 20px;
+  grid-row-gap: 12px;
+  margin: auto;
+  padding: 0 1.5rem;
+
+  /* margin-left: auto;
   background-color: #f7c2ab;
+  margin: 10px 50px; */
+}
+
+@media screen and (min-width: 1254px) {
+  .fotogalerie {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+
+  }
 }
 
 .fotogalerie img {
-  width: 32%;
+  width: 100%;
+  transition: 1s;
+  /* padding: 5px; */
+}
+
+.fotogalerie img:hover {
+  transform: scale(1.1);
 }
 
 .fotogalerie--img--kulaty {
   border-radius: 10px;
-}
-
-.fotogalerie--img--vicekulaty {
-  border-radius: 50%;
 }
 
 .otoc {
@@ -118,7 +159,7 @@ h3 {
 }
 
 .lesnikavarna,
-.fotogalerie,
+/* .fotogalerie, */
 .namlynku,
 .omenu,
 .reservation {
@@ -145,7 +186,7 @@ td {
 
 .showcase {
   padding: 300px 30px;
-  background-image: url(obrazky/header1.jpg);
+  background-image: url(../obrazky/header1.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -170,7 +211,7 @@ td {
 .reservation {
   border-radius: 5px;
   padding: 10px;
-  width: 350px;
+  width: 300px;
   margin: 20px auto;
   background-color: #f7c2ab;
   border-radius: 5px;

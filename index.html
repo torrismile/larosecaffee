@@ -2,13 +2,23 @@
 <html lang="en" dir="ltr">
   <head>
     <title>La Rose Caffee</title>
-    <link rel="stylesheet" href="style_kavarna.css">
-    <link rel="stylesheet" href="hamburger.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
+
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,500i,600i,700,700i|Raleway&display=swap&subset=latin-ext" rel="stylesheet">
-    <script src="script.js" type="text/javascript"></script>
+
+    <script src="js/script.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/hamburger.css">
+    <link rel="stylesheet" type="text/css" href="css/style_kavarna.css">
+
+    <link rel="stylesheet" type="text/css" href="libraries/lightbox/css/lightbox.min.css">
+    <script src="libraries/lightbox/js/lightbox-plus-jquery.min.js" type="text/javascript"></script>
+    <script>
+      lightbox.option({
+        'disableScrolling': true
+      })
+    </script>
 
   </head>
   <body>
@@ -46,13 +56,13 @@
 
 <!-- Sekce o fotogalerie -->
     <div class="fotogalerie" id="fotogalerie">
-      <h2>Fotogalerie</h2>
-      <img class="fotogalerie--img--kulaty" src="obrazky/kava1.jpg" alt="kava1">
-      <img class="fotogalerie--img--kulaty" src="obrazky/kava2.jpg" alt="kava2">
-      <img class="fotogalerie--img--kulaty" src="obrazky/kava3.jpg" alt="kava3">
-      <img class="fotogalerie--img--kulaty" src="obrazky/kava4.jpg" alt="kava4">
-      <img class="fotogalerie--img--kulaty" src="obrazky/kava5.jpg" alt="kava5">
-      <img class="fotogalerie--img--kulaty" id="img6" src="obrazky/kava6.jpg" alt="kava6">
+      <!-- <h2>Fotogalerie</h2> -->
+      <a target="_top" href="obrazky/kava1.jpg" data-lightbox="mygallery"><img class="fotogalerie--img--kulaty" src="obrazky/header.jpg" alt="kava1"></a>
+      <a target="_top" href="obrazky/kava2.jpg" data-lightbox="mygallery"><img class="fotogalerie--img--kulaty" src="obrazky/kava2.jpg" alt="kava2"></a>
+      <a target="_top" href="obrazky/kava3.jpg" data-lightbox="mygallery"><img class="fotogalerie--img--kulaty" src="obrazky/kava3.jpg" alt="kava3"></a>
+      <a target="_top" href="obrazky/kava4.jpg" data-lightbox="mygallery"><img class="fotogalerie--img--kulaty" src="obrazky/kava4.jpg" alt="kava4"></a>
+      <a target="_top" href="obrazky/kava5.jpg" data-lightbox="mygallery"><img class="fotogalerie--img--kulaty" src="obrazky/kava5.jpg" alt="kava5"></a>
+      <a target="_top" href="obrazky/kava6.jpg" data-lightbox="mygallery"><img class="fotogalerie--img--kulaty" src="obrazky/kava6.jpg" alt="kava6"></a>
     </div>
 
 <!-- Sekce co na mlynku -->
@@ -168,7 +178,7 @@
         <button class="button" id="reservation-submit" type="button" name="button">Rezervovat</button>
         <div class="thanku"> <h3>Děkujeme za rezervaci</h3></div>
     </div>
-    <script src="script.js" type="text/javascript"></script>
+    <script src="js/script.js" type="text/javascript"></script>
     <script type="text/javascript">
       setReservationSubmit();
     </script>
