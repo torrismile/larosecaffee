@@ -19,7 +19,7 @@ body {
   padding: 0;
 }
 
-.toggler {
+.menu-wrap__toggler {
   position: absolute;
   width: 0;
   height: 0;
@@ -63,7 +63,7 @@ body {
     z-index: 1;
   }
 
-  .menu-wrap .toggler {
+  .menu-wrap .menu-wrap__toggler {
     position: absolute;
     top: 0;
     right: 0;
@@ -76,7 +76,7 @@ body {
     opacity: 0;
   }
 
-  .menu-wrap .hamburger {
+  .menu-wrap .menu-wrap__toggler--hamburger {
     position: absolute;
     top: 0;
     right: 0;
@@ -90,7 +90,7 @@ body {
     justify-content: center;
   }
 
-  .menu-wrap .hamburger > div {
+  .menu-wrap .menu-wrap__toggler--hamburger > div {
     position: relative;
     width: 100%;
     height: 2px;
@@ -101,8 +101,8 @@ body {
     transition: all 0.4s ease;
   }
 
-  .menu-wrap .hamburger > div:before,
-  .menu-wrap .hamburger > div:after {
+  .menu-wrap .menu-wrap__toggler--hamburger > div:before,
+  .menu-wrap .menu-wrap__toggler--hamburger > div:after {
     content: '';
     position: absolute;
     z-index: 1;
@@ -112,34 +112,34 @@ body {
     background: inherit;
   }
 
-  .menu-wrap .hamburger > div:after {
+  .menu-wrap .menu-wrap__toggler--hamburger > div:after {
     top: 10px;
   }
 
-  .menu-wrap .toggler:checked + .hamburger > div {
+  .menu-wrap .menu-wrap__toggler:checked + .menu-wrap__toggler--hamburger > div {
     transform: rotate(135deg);
   }
 
-  .menu-wrap .toggler:checked + .hamburger > div:before,
-  .menu-wrap .toggler:checked + .hamburger > div:after {
+  .menu-wrap .menu-wrap__toggler:checked + .menu-wrap__toggler--hamburger > div:before,
+  .menu-wrap .menu-wrap__toggler:checked + .menu-wrap__toggler--hamburger > div:after {
     top:0;
     transform: rotate(90deg);
   }
 
-  .menu-wrap .toggler:checked:hover + .hamburger > div {
+  .menu-wrap .menu-wrap__toggler:checked:hover + .menu-wrap__toggler--hamburger > div {
     transform: rotate(225deg);
   }
 
-  .menu-wrap .toggler:checked ~ .menu {
+  .menu-wrap .menu-wrap__toggler:checked ~ .menu {
     visibility: visible;
   }
 
-  .menu-wrap .toggler:checked ~ .menu > div {
+  .menu-wrap .menu-wrap__toggler:checked ~ .menu > div {
     transform: scale(1);
     transition-duration: var(--menu-speed);
   }
 
-  .menu-wrap .toggler:checked ~ .menu > div > div {
+  .menu-wrap .menu-wrap__toggler:checked ~ .menu > div > div {
     opacity: 1;
     transition: opacity 0.4s ease;
   }
@@ -190,4 +190,5 @@ body {
     text-decoration: none;
     transition: color 0.4s ease;
   }
+
 }

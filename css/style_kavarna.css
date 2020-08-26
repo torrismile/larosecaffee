@@ -26,7 +26,7 @@ body {
     overflow: auto;
 }
 
-.header {
+.heading {
   background-image: url(../obrazky/rsz_header1.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -37,7 +37,7 @@ body {
   height: 94vh;
 }
 
-.heading-primary-main {
+.heading__primary--main {
   font-size: 100px;
   font-weight: 500;
   letter-spacing: 15px;
@@ -52,15 +52,15 @@ body {
   }
 
   @media screen and (max-width: 480px) {
-    .heading-primary-main {
+    .heading__primary--main {
       font-size: 45px;
     }
-    .header {
+    .heading {
       height: 90vh;
     }
   }
 
-.text-box {
+.heading__text-box{
   position: absolute;
   top: 40%;
   left: 50%;
@@ -98,7 +98,7 @@ h3 {
 }
 
 @media screen and (max-width: 480px) {
-  .lesnikavarna p {
+  .section-about p {
     font-size: 14px;
     line-height: 18px;
     padding: 0;
@@ -107,7 +107,7 @@ h3 {
 }
 
 @media screen and (min-width: 481px) and (max-width: 1367px) {
-  .lesnikavarna p {
+  .sectin-about p {
     font-size: 20px;
     line-height: 1.5;
     padding: 0;
@@ -116,7 +116,7 @@ h3 {
 }
 
 @media screen and (min-width: 1368px) {
-  .lesnikavarna p {
+  .section-about p {
     padding-left: 20%;
     padding-right: 20%;
     font-size: 24px;
@@ -126,7 +126,7 @@ h3 {
   }
 }
 
-.fotogalerie {
+.photo-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-column-gap: 20px;
@@ -140,7 +140,7 @@ h3 {
 }
 
 @media screen and (min-width: 1254px) {
-  .fotogalerie {
+  .photo-gallery {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     grid-column-gap: 20px;
@@ -149,17 +149,17 @@ h3 {
   }
 }
 
-.fotogalerie img {
+.photo-gallery img {
   width: 100%;
   transition: 1s;
   /* padding: 5px; */
 }
 
-.fotogalerie img:hover {
+.photo-gallery img:hover {
   transform: scale(1.1);
 }
 
-.fotogalerie--img--kulaty {
+.photo-gallery--img--kulaty {
   border-radius: 10px;
 }
 
@@ -167,19 +167,18 @@ h3 {
   transform: rotate(450deg);
 }
 
-.namlynku p {
+.section-coffee p {
   text-align: center;
 }
 
-.omenu {
+.section-menu {
   background-color: #f7c2ab;
 }
 
-.lesnikavarna,
-/* .fotogalerie, */
-.namlynku,
-.omenu,
-.reservation {
+.section-about,
+.section-coffee,
+.section-menu,
+.section-reservation {
   padding: 50px 15%;
   overflow: hidden;
 }
@@ -196,12 +195,12 @@ td {
   padding: 10px 0;
 }
 
-.cena {
+.section-menu__price {
   text-align: right;
   padding-left: 50px;
 }
 
-.paticka {
+.footer {
   margin: 0;
   padding: 20px 0;
   text-align: center;
@@ -211,7 +210,7 @@ td {
 }
 
 @media only screen and (max-width: 800px) {
-.reservation {
+.section-reservation {
   border-radius: 5px;
   padding: 10px;
   width: 300px;
@@ -222,7 +221,7 @@ td {
 }
 
 @media only screen and (min-width: 801px) {
-.reservation {
+.section-reservation {
   border-radius: 5px;
   padding: 10px;
   width: 400px;
@@ -232,7 +231,7 @@ td {
   }
 }
 
-.reservation h2 {
+.section-reservation h2 {
   color: #777;
 }
 
@@ -240,19 +239,19 @@ form {
   padding: 30px 40px;
 }
 
-.form-control {
+.section-reservation__form--form-control {
   margin-bottom: 5px;
   padding-bottom: 5px;
   position: relative;
 }
 
-.form-control label {
+.section-reservation__form--form-control label {
   color: #777;
   display: block;
   margin-bottom: 5px;
 }
 
-.form-control input {
+.section-reservation__form--form-control input {
   border: 2px solid #ccc;
   display: block;
   padding: 10px;
@@ -261,20 +260,20 @@ form {
   width: 100%;
 }
 
-.form-control input:focus {
+.section-reservation__form--form-control input:focus {
   outline: 0;
   border-color: #777;
 }
 
-.form-control.success input {
+.section-reservation__form--form-control.success input {
   border-color: var(--success-color);
 }
 
-.form-control.error input {
+.section-reservation__form--form-control.error input {
   border-color: var(--error-color);
 }
 
-.form-control small {
+.section-reservation__form--form-control small {
   color: var(--error-color);
   position: relative;
   /* bottom: 0; */
@@ -283,7 +282,7 @@ form {
   line-height: normal;
 }
 
-.form-control.error small {
+.section-reservation__form--form-control.error small {
   display: block;
   padding: 10px 0;
 }

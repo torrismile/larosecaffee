@@ -104,15 +104,16 @@ function convertJson () {
 function showMessage(username) {
   let newMassege = document.querySelector(".thanku");
   newMassege.innerHTML = `Thank you, ${username}`;
-  newMassege.style.visibility= "visible"
-  newMassege.style.color= "#777";
+  newMassege.style.visibility = "visible";
+  newMassege.style.color = "#777";
+  newMassege.style.textAlign = "center";
 }
 
 
 //Show input error message
 function showError(input, message) {
   const formControl = input.parentElement;
-  formControl.className = 'form-control error';
+  formControl.className = 'section-reservation__form--form-control error';
   const small = formControl.querySelector('small');
   small.innerText = message;
 }
@@ -120,7 +121,7 @@ function showError(input, message) {
 //Show success outline
 function showSuccess(input) {
   const formControl = input.parentElement;
-  formControl.className = 'form-control success';
+  formControl.className = 'section-reservation__form--form-control success';
 }
 
 //Check email is valid
