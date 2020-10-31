@@ -152,11 +152,13 @@ h3 {
 .photo-gallery img {
   width: 100%;
   transition: 1s;
-  /* padding: 5px; */
+  transform: scale(0.95);
+  opacity: 0.7;
 }
 
 .photo-gallery img:hover {
   transform: scale(1.1);
+  opacity: 1;
 }
 
 .photo-gallery--img--kulaty {
