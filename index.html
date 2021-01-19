@@ -8,12 +8,11 @@
 
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,500i,600i,700,700i|Raleway&display=swap&subset=latin-ext" rel="stylesheet">
 
-    <script src="js/script.js" type="text/javascript"></script>
     <link rel="stylesheet" href="css/hamburger.css">
     <link rel="stylesheet" type="text/css" href="css/style_kavarna.css">
 
     <link rel="stylesheet" type="text/css" href="libraries/lightbox/css/lightbox.min.css">
-    <script src="libraries/lightbox/js/lightbox-plus-jquery.min.js" type="text/javascript"></script>
+    <script src="libraries/lightbox/js/lightbox-plus-jquery.min.js"></script>
     <script>
       lightbox.option({
         'disableScrolling': true
@@ -65,12 +64,12 @@
 <!-- Sekce o fotogalerie -->
     <div class="photo-gallery" id="photo-gallery">
       <!-- <h2>Fotogalerie</h2> -->
-      <a target="_top" href="obrazky/header.jpg" data-lightbox="mygallery"><img class="photo-gallery--img--kulaty" src="obrazky/header.jpg" alt="kava1"></a>
-      <a target="_top" href="obrazky/kava2.jpg" data-lightbox="mygallery"><img class="photo-gallery--img--kulaty" src="obrazky/kava2.jpg" alt="kava2"></a>
-      <a target="_top" href="obrazky/kava3.jpg" data-lightbox="mygallery"><img class="photo-gallery--img--kulaty" src="obrazky/kava3.jpg" alt="kava3"></a>
-      <a target="_top" href="obrazky/kava4.jpg" data-lightbox="mygallery"><img class="photo-gallery--img--kulaty" src="obrazky/kava4.jpg" alt="kava4"></a>
-      <a target="_top" href="obrazky/kava5.jpg" data-lightbox="mygallery"><img class="photo-gallery--img--kulaty" src="obrazky/kava5.jpg" alt="kava5"></a>
-      <a target="_top" href="obrazky/kava6.jpg" data-lightbox="mygallery"><img class="photo-gallery--img--kulaty" src="obrazky/kava6.jpg" alt="kava6"></a>
+      <a target="_top" href="obrazky/header.jpeg" data-lightbox="mygallery"><img class="photo-gallery--img--kulaty" src="obrazky/header.jpeg" alt="kava1"></a>
+      <a target="_top" href="obrazky/kava2.jpeg" data-lightbox="mygallery"><img class="photo-gallery--img--kulaty" src="obrazky/kava2.jpeg" alt="kava2"></a>
+      <a target="_top" href="obrazky/kava3.jpeg" data-lightbox="mygallery"><img class="photo-gallery--img--kulaty" src="obrazky/kava3.jpeg" alt="kava3"></a>
+      <a target="_top" href="obrazky/kava4.jpeg" data-lightbox="mygallery"><img class="photo-gallery--img--kulaty" src="obrazky/kava4.jpeg" alt="kava4"></a>
+      <a target="_top" href="obrazky/kava5.jpeg" data-lightbox="mygallery"><img class="photo-gallery--img--kulaty" src="obrazky/kava5.jpeg" alt="kava5"></a>
+      <a target="_top" href="obrazky/kava6.jpeg" data-lightbox="mygallery"><img class="photo-gallery--img--kulaty" src="obrazky/kava6.jpeg" alt="kava6"></a>
     </div>
 
 <!-- Sekce co na mlynku -->
@@ -154,17 +153,17 @@
         <h2>Udělej rezervaci</h2>
         <div class="section-reservation__form--form-control">
           <label for="userName">Jméno</label>
-          <input type="text" name="userName" id="userName"/>
+          <input type="text" autocomplete="given-name" inputmode="text" name="userName" id="userName"/>
           <small>Chyba</small>
         </div>
         <div class="section-reservation__form--form-control">
           <label for="userSurname">Příjmení</label>
-          <input type="text" name="userSurname" id="userSurname"/>
+          <input type="text" autocomplete="family-name" inputmode="text" name="userSurname" id="userSurname"/>
           <small>Chyba</small>
         </div>
         <div class="section-reservation__form--form-control">
           <label for="email">Email</label>
-          <input type="text" name="email" id="email"/>
+          <input type="text" autocomplete="email" inputmode="email" name="email" id="email"/>
           <small>Chyba</small>
         </div>
         <div class="section-reservation__form--form-control">
@@ -179,7 +178,7 @@
         </div>
         <div class="section-reservation__form--form-control">
           <label for="numberPeople">Počet lidí</label>
-          <input type="number" name="numberPeople" id="numberPeople"/>
+          <input type="number" inputmode="decimal" name="numberPeople" id="numberPeople"/>
           <small>Chyba</small>
         </div>
         </form>
@@ -187,7 +186,7 @@
         <button class="button" id="reservation-submit" type="button" name="button">Rezervovat</button>
         <div class="thanku"> <h3>Děkujeme za rezervaci</h3></div>
     </div>
-    <script src="js/script.js" type="text/javascript"></script>
+    <script src="js/script.js"></script>
     <script type="text/javascript">
       setReservationSubmit();
     </script>
