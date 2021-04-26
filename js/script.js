@@ -19,7 +19,7 @@ function sentMessage(message) {
   };
   console.log("Sending request: ", requestOptions);
 
-  fetch("https://ubb0p6bsy0.execute-api.eu-central-1.amazonaws.com/default/send_email", requestOptions)
+  fetch("https://dj4abr5e13.execute-api.eu-central-1.amazonaws.com/default/send_email_larosecaffee", requestOptions)
     .then(response => response.text())
     .then(result => console.log(result))
     .catch(error => console.log('error', error));
@@ -157,7 +157,7 @@ function checkLength(input, min, max) {
   if (input.value.length < min) {
     showError(input, `${getFieldName(input)} must be at least ${min} characters`);
   } else if (input.value.length > max) {
-    showError(input, `${getFieldName(inpit)} must be less than ${max} characters`);
+    showError(input, `${getFieldName(input)} must be less than ${max} characters`);
   } else {
     isError = false;
     showSuccess(input);
